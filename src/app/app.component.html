@@ -1,0 +1,35 @@
+<h1>Our MongoDB is Working!</h1>
+<ul *ngFor="let con of Contacts;let i=index">
+  <li>NAME:{{ con.name }}</li>
+  <li>FATHERS NAME:{{con.fname}}</li>
+  <li>CONTACT:{{con.phonenumber}}</li>
+  <li><button (click)="updatecontact(con._id,data)">update</button></li>
+  <li> <button (click)="delcontact(con._id)">delete</button></li>
+</ul>
+
+
+<!-- <ul>
+  <li *ngFor="let user of users">{{ user.name }}</li>
+</ul> -->
+<br>
+<br><br>
+
+<form>
+  <input type="text" name="text" [(ngModel)]="data">
+  <!-- <input type="text" name="name" [(ngModel)]="text1"> -->
+  <button type="submit" (click)="submit()">send</button>
+  <!-- <input type="submit" value="submit"> -->
+</form>
+<br>
+<!-- <input type="text" name="lname" ([ngModel])="formdata.lname">
+  <br>
+  <input type="text" name="phone" ([ngModel])="formdata.phone"> -->
+<br>
+
+<br><br><br><br><br>
+<form>
+  <input type="text" name="text" [(ngModel)]="text1">
+  <input type="text" name="name" [(ngModel)]="text2">
+  <input type="text" name="phone" [(ngModel)]="number">
+  <button type="submit" (click)="submit1()">send</button>
+</form>
